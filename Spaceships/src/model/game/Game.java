@@ -7,7 +7,6 @@ import model.objects.SpaceObject;
 
 public class Game {
 	private Player[] players;
-	private int activePlayer;
 	private Playground playground;
 	private ArrayList<SpaceObject> objects;
 	private State state;
@@ -15,10 +14,10 @@ public class Game {
 	
 	public Game(Player[] players, Settings settings){
 		this.players=players;
-		this.activePlayer=0;
 		state = new State();
+		System.out.println("created states");
 		objects = new ArrayList<SpaceObject>();
 		this.settings=settings;
-		playground= new Playground(settings.getFieldLenght(), settings.getFieldHeight(), settings);
+		playground= new Playground(settings);
 	}
 }

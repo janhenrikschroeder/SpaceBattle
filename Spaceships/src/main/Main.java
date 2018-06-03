@@ -1,4 +1,5 @@
 package main;
+import controller.mainMenu.MainMenuController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -25,8 +26,10 @@ public class Main extends Application{
 	
 	
 	@Override
-	public void start(Stage arg0) throws Exception {
+	public void start(Stage stage) throws Exception {
 		Main.stage = stage;
+		MainMenuController mainCtr =new MainMenuController();
+		root = new StackPane(mainCtr.getView());
 		
 		//TODO set root
 		scene = new Scene(root, 800, 640);
@@ -44,5 +47,7 @@ public class Main extends Application{
 	public static Logbook getLog() {
 		return log;
 	}
+	
+	
 	
 }

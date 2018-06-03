@@ -8,7 +8,7 @@ import model.objects.ships.shipStats.Shield;
 import model.objects.ships.shipStats.Weapons;
 
 public class Blueprint {
-	private Type shipClass;
+	private ShipType shipClass;
 	private String name;
 	private Hull hull;
 	private Shield shield;

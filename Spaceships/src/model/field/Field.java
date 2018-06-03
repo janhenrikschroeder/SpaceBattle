@@ -7,7 +7,13 @@ public class Field {
 	private FieldProperty fp;
 	private SpaceObject fieldObject;
 	private Playground parent;
+	private int xCoordinate;
+	private int yCoordinate;
 	
+	public Field(int x, int y) {
+		this.xCoordinate=x;
+		this.yCoordinate=y;
+	}
 	public Playground getParent() {
 		return parent;
 	}
@@ -26,4 +32,11 @@ public class Field {
 	public void setFieldObject(SpaceObject fieldObject) {
 		this.fieldObject = fieldObject;
 	}
+	public int getxCoordinate() {
+		return xCoordinate;
+	}
+	public int getyCoordinate() {
+		return yCoordinate;
+	}
+	
 }

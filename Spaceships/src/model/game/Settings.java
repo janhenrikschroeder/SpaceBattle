@@ -7,6 +7,20 @@ public class Settings {
 	private int minePercentage;
 	
 	
+	public Settings(){
+		fieldLenght = DefaultSettings.FIELDLENGHT;
+		fieldHeight = DefaultSettings.FIELDHEIGHT;
+		playerCount = DefaultSettings.PLAYERCOUNT;
+		minePercentage = DefaultSettings.MINEPERCENTAGE;
+	}
+	
+	public Settings(int lenght, int height, int playerCount, int minePercentage){
+		this.fieldLenght =lenght;
+		this.fieldHeight = height;
+		this.playerCount = playerCount;
+		this.minePercentage = minePercentage;
+	}
+	
 	public int getMinePercentage() {
 		return minePercentage;
 	}

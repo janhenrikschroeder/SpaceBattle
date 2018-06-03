@@ -7,17 +7,23 @@ import model.field.Field;
 import model.objects.ObjectType;
 import model.objects.SpaceObject;
 import model.objects.ships.Ship;
+import model.objects.ships.ShipType;
 
 public class Mine extends FieldProperty{
-	private final int range = 1;
-	private int xCoordinate;
-	private int yCoordinate;
-	private Field parent;
 	
-	public Mine(int x, int y){
-		this.xCoordinate=x;
-		this.yCoordinate=y;
+	private final int resourceGain =20;
+	private final int range = 1;
+	private final int resources =4000;
+	
+	public Mine(int x, int y, Field parent) {
+		super(x, y, parent);
+		ID = PropertyIdentifier.MINE;
 	}
+
+	
+	
+	
+	
 	
 	@Override
 	public void handleProperty() {
@@ -25,13 +31,18 @@ public class Mine extends FieldProperty{
 		try {
 			 fields = getFieldsInRange();
 		} catch (OutOfPlaygroundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		for (Field field: fields){
 			SpaceObject obj = field.getFieldObject();
-			if(obj.getType()==ObjectType.Ship){
+			if(obj.getObjectType()==ObjectType.Ship){
 				Ship ship = (Ship) obj;
+				if (ship.getShipType()==ShipType.MININGVESSEL){
+					ship.getOwner().addResources(resourceGain);
+				}
+				if (ship.getShipType()==ShipType.HQ){
+					ship.getOwner().addResources(resourceGain/2);
+				}
 			}
 		}
 		
