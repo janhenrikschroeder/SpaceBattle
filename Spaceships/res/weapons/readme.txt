@@ -1,0 +1,1 @@
+Name	Damage	Range	Angle	Acc	Type	Properties

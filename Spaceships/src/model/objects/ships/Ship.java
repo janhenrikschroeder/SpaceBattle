@@ -7,6 +7,8 @@ import model.objects.SpaceObject;
 public class Ship extends Blueprint implements SpaceObject {
 	private Player owner;
 	private ShipType shipType;
+	
+	
 
 	@Override
 	public ObjectType getObjectType() {

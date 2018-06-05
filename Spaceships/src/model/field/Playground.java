@@ -25,24 +25,6 @@ public class Playground {
 		}
 		this.settings=settings;
 		initializeField();
-		printField();
-	}
-
-	private void printField() {
-		for(Field[] fields: playground){
-			System.out.print("[");
-			for(Field field : fields){
-				if(field.getFp().getID()==PropertyIdentifier.SPACE){
-					System.out.print("o");
-				}else{
-					System.out.print("x");
-				}
-				System.out.print(", ");
-			}
-			System.out.println("]");
-		}
-		System.out.println("");
-		System.out.println("");
 	}
 
 	private void initializeField() {

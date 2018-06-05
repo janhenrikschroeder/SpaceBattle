@@ -1,0 +1,1 @@
+Name	Class		Cost	Hull	Shield	Regen	FrontAmount	FrontTypes RearAmount	RearTypes	SideAmount	SideTypes	Speed	Maneuver	Spotting	Camo	Properties
