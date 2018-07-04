@@ -1,5 +1,5 @@
 package model.objects;
 
-public enum ObjectType {Ship, Other
+public enum ObjectType {SHIP, Other
 
 }

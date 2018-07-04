@@ -1,6 +1,4 @@
-/controller/
-/customExceptions/
-/main/
 /model/
 /view/
-/MainMenu/
+/controller/
+/main/

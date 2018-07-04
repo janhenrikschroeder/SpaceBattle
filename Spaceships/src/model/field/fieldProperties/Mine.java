@@ -35,7 +35,7 @@ public class Mine extends FieldProperty{
 		}
 		for (Field field: fields){
 			SpaceObject obj = field.getFieldObject();
-			if(obj.getObjectType()==ObjectType.Ship){
+			if(obj.getObjectType()==ObjectType.SHIP){
 				Ship ship = (Ship) obj;
 				if (ship.getShipType()==ShipType.MININGVESSEL){
 					ship.getOwner().addResources(resourceGain);

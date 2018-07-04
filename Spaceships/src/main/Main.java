@@ -34,8 +34,8 @@ public class Main extends Application{
 		//TODO set root
 		scene = new Scene(root, 800, 640);
 		
-		stage.setScene(scene);
-		stage.show();
+		this.stage.setScene(scene);
+		this.stage.show();
 		
 	}
 
@@ -46,6 +46,12 @@ public class Main extends Application{
 
 	public static Logbook getLog() {
 		return log;
+	}
+	
+	public static void resizeScene(int x, int y){
+		scene =new Scene(root, x, y);
+		stage.setScene(scene);
+		stage.show();
 	}
 	
 	

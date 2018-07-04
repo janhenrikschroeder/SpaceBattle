@@ -41,7 +41,6 @@ public class SettingsViewController implements EventHandler<ActionEvent>{
 		}
 		if(e.getSource()==view.getStandardConfig()){
 			Main.switchContent(view, prepareSwitchingToPlayerConfig());
-			System.out.println("switch to player config");
 		}
 	}
 
